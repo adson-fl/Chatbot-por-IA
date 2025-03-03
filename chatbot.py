@@ -12,3 +12,10 @@ genai.configure(api_key=api_key)
 
 model = genai.GenerativeModel("gemini-1.5-flash-latest")
 
+response = model.generate_content("quem criou os modelos de IA GEMINI ?")
+
+ # Verificando a resposta
+if response:
+  print(response.text)
+else:
+  print("Erro: Não houve resposta do modelo.")
